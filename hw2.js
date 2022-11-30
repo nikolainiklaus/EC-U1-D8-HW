@@ -55,27 +55,28 @@ console.log("only odds now: ", evenAndOdd2);
  Write a piece of code for removing all the vowels from a string.
 */
 
-let randomWord = "hello there!"
-let newStrg = "";
-
-for (let index = 0; index < randomWord.length; index++) {
-    if (randomWord[index] === "a" || randomWord[index] === "e" || 
-        randomWord[index] === "i" || randomWord[index] === "o" || 
-        randomWord[index] === "u") {
-            newStrg = randomWord.replace(randomWord[index], '')
-        }
-}
-
-console.log(newStrg);
+var string = ["hello there!"];
+string = string.map(x=>x.replace( /[aeiou]/g, '' ));
+console.log(string);
 
 /* EXTRA 7
  Write a piece of code for increasing all the numerical values in a array by 1.
 */
 
+const arr = [1, 2, 3];
+
+const newArr = arr.map(num => num + 1);
+console.log(newArr);
 
 /* EXTRA 8 
  Replace all the strings contained in an array with their length.
  es.: ["strive", "is", "great"] => [6, 2, 5]
 */
 
-/* WRITE YOUR ANSWER HERE */
+let strings = ["hello", "worlda"]
+
+for(var i=0; i < strings.length; i++) {
+    strings[i] = strings[i].replace(strings[i], strings[i].length);
+   }
+
+   console.log(strings);
